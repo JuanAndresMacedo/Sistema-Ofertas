@@ -1,0 +1,197 @@
+<!-- Juan Andres Macedo 290961 -->
+<!-- Joaquín Seoane 279793 -->
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8" />
+        <title>Obligatorio 1</title>
+        <link rel="stylesheet" href="css/estilos.css">
+        <script src="js/clases.js"></script>
+        <script src="js/funciones.js"></script>
+    </head>
+    <body>
+        <header>
+            <h1 id="Header">Sistema de Ofertas</h1>
+        </header>
+        <nav id="Nav">
+            <a href="#SeccionDatos">Datos</a>
+            <a href="#SeccionConsultas">Consultas</a>
+            <a href="#SeccionEquipo">Conozca al Equipo</a>
+        </nav>
+        <section id="SeccionDatos">
+            <h2 class="TituloSecciones">Datos</h2>
+            <article id="AltaEmpleado">
+                <h2 id="AltaEmpleadoH2" class="TitulosArticulos">Alta de Empleado</h2>
+                <form id="formAltaDeEmpleado">
+                    <label for="nombreEmpleado"> Nombre </label>
+                    <input type="text" id="nombreEmpleado" required maxlength="30"/>
+                    <br>
+                    <label for="cedulaEmpleado"> Cédula </label>
+                    <input type="number" id="cedulaEmpleado" required max="99999999"/>
+                    <br>
+                    <label for="departamentoEmpleado"> Departamento </label>
+                    <select id="departamentoEmpleado">
+                        <option value="Artigas" selected> Artigas </option>
+                        <option value="Canelones"> Canelones </option>
+                        <option value="Cerro Largo"> Cerro Largo </option>
+                        <option value="Colonia"> Colonia </option>
+                        <option value="Durazno"> Durazno </option>
+                        <option value="Flores"> Flores </option>
+                        <option value="Florida"> Florida </option>
+                        <option value="Lavalleja"> Lavalleja </option>
+                        <option value="Maldonado"> Maldonado </option>
+                        <option value="Montevideo"> Montevideo </option>
+                        <option value="Paysandú"> Paysandú </option>
+                        <option value="Rio Negro"> Río Negro </option>
+                        <option value="Rivera"> Rivera </option>
+                        <option value="Rocha"> Rocha </option>
+                        <option value="Salto"> Salto </option>
+                        <option value="San Jose"> San Jose </option>
+                        <option value="Soriano"> Soriano </option>
+                        <option value="Tacuarembo"> Tacuarembó </option>
+                        <option value="Treinta y Tres"> Treinta y Tres </option>
+                    </select>
+                    <br>
+                    <label for="nombreEmpleado"> Edad </label>
+                    <input type="number" min="0" id="edadEmpleado" required max="99"/>
+                    <br>
+                    <input type="button" id="btnAgregarEmpleado" value="Agregar" />
+                </form>
+            </article>
+            <article id="AltaRubro">
+                <h2 class="TitulosArticulos">Alta de Rubro</h2>
+                <form id="formAltaDeRubro">
+                    <br>
+                    <label for="nombreRubro"> Nombre </label>
+                    <input type="text" id="nombreRubro" required maxlength="30"/>
+                    <br>
+                    <label for="descripcion"> Descripcion </label>
+                    <input type="text" id="descripcion" required maxlength="30"/>
+                    <br>
+                    <input type="button" id="btnAgregarRubro" value="Agregar" />
+                </form>
+            </article>
+            <article id="AltaOferta">
+                <h2 class="TitulosArticulos">Alta de Ofertas</h2>
+                <form id="formAltaDeOferta">
+                    <br>
+                    <label for="empleadoOferta">Empleado</label>
+                    <select id="empleadoOferta" required>
+                        <option value="" selected> Sin datos</option>
+                    </select>
+                    <br>
+                    <label for="rubro">Rubro</label>
+                    <select id="rubro" required>
+                        <option value="" selected> Sin datos</option>
+                    </select>
+                    <br>
+                    <label for="detalle">Detalle</label>
+                    <input type="text" id="detalle" required maxlength="30"/>
+                    <br>
+                    <label for="precio">Precio</label>
+                    <input type="number" id="precio" required/>
+                    <br>
+                    <input type="button" id="btnAgregarOferta" value="Agregar" />
+                </form>
+            </article>
+            <article>
+                <h2 class="TitulosArticulos">Bajas de Oferta</h2>
+                <form id="formBajaOferta">
+                    <br>
+                    <label for="oferta">Oferta</label>
+                    <select id="oferta" required>
+                        <option value="" selected>Sin datos</option>
+                    </select>
+                    <br>
+                    <input type="button" id="btnEliminarOferta" value="Borrar" />
+                </form>
+            </article>
+        </section>
+        <section id="SeccionConsultas">
+            <h2 class="TituloSecciones">Consultas</h2>
+            <article id="OfertasRubro">
+                <h2 class="TitulosArticulos">Ofertas de un rubro</h2>
+                <form id="formOfertasRubro">
+                    <br>
+                    <label for="rubroConsultas">Rubro</label>
+                    <select id="rubroConsultas" required>
+                        <option value="" selected> Sin datos</option>
+                    </select>
+                    <input type="button" id="btnConsultarOfertasRubro" value="Consultar"/> 
+                    <br> 
+                    <label>Orden: </label>
+                    <br>
+                    <input type="radio" id="precioCreciente" checked name="radioOrden"/>
+                    <label class="labelRadioBtn" for="precioCreciente">Precio Creciente</label>
+                    <br>
+                    <input type="radio" id="nombreDepartamentoCreciente" name="radioOrden" />
+                    <label class="labelRadioBtn" for="nombreDepartamentoCreciente">Nombre departamento creciente</label>
+                    <br>
+                    <label id="tituloRubroDatos" class="titleTableOfertasRubro">Rubro: Sin Datos</label>
+                    <label id="PromedioRubroDatos" class="titleTableOfertasRubro">Promedio: Sin Datos</label>
+                </form>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Nombre Empleado</th>
+                            <th>Departamento</th>
+                            <th>Detalle de la oferta</th>
+                            <th>Precio</th>
+                            <th>Tipo</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tablaRubros"></tbody>
+                </table>
+            </article>
+            <article>
+                <h2 class="TitulosArticulos">Rubros con Máxima Cantidad de Ofertas</h2>
+                <ul id="ListaRubrosMaxCantidadOfertas">
+                    <li>Sin Datos</li>
+                </ul>
+            </article>
+            <article>
+                <h2 class="TitulosArticulos">Rubros sin Ofertas</h2>
+                <ul id="ListaRubrosSinOfertas">
+                    <li>Sin Datos</li>
+                </ul>
+            </article>
+            <article>
+                <h2 class="TitulosArticulos">Tabla de Empleados</h2>
+                <table>
+                    <thead>
+                    <tr>
+                        <th>Nombre Empleado</th>
+                        <th>Cédula</th>
+                        <th>Departamento</th>
+                        <th>Edad</th>
+                        <th>Cantidad de Ofertas</th>
+                    </tr>
+                </thead>
+                <tbody id="tablaEmpleados">
+                    
+                </tbody>
+                </table>
+            </article>
+        </section>
+        <section id="SeccionEquipo">
+            <h2 class="TituloSecciones">Conozca al Equipo</h2>
+            <article>
+                <h2 class="TitulosArticulos">Primer Integrante</h2>
+                <div class="divConozcaAlEquipo">
+                    <img class="fotoIntegrantes" src="img/integrante1.png" alt="Foto primer integrante" />
+                    <a href="https://uy.linkedin.com/in/juan-andr%C3%A9s-macedo-43407822a?trk=people-guest_people_search-card" target="_blank"><img class="linkedin" src="img/linkedinIcon.png" alt="icono linkedin" /></a>
+                    <label class="datosIntegrantes">Juan Andres Macedo (Número de Estudiante 290961)</label>
+                </div>
+            </article>
+            <article>
+                <h2 class="TitulosArticulos">Segundo Integrante</h2>
+                <div class="divConozcaAlEquipo">
+                    <img class="fotoIntegrantes" src="img/integrante2.png" alt="Foto segundo integrante" />
+                    <a href="https://uy.linkedin.com/school/universidad-ort-uruguay/" target="_blank"><img class="linkedin" src="img/linkedinIcon.png" alt="icono linkedin" /></a>
+                    <label class="datosIntegrantes">Joaquin Seoane (Número de Estudiante 279793)</label>
+                </div>
+            </article>
+        </section>
+        <footer>Programación I - Obligatorio 1er. semestre 2022 - Universidad ORT Uruguay</footer>
+    </body>
+</html>

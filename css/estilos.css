@@ -1,0 +1,149 @@
+/* Juan Andres Macedo 290961 */
+/* Joaquín Seoane 279793 */
+
+body {
+    background-color: rgb(105, 105, 105);
+}
+
+#Header{
+    color:#ffffff;
+    text-align: center;
+}
+
+#Nav{
+    background-color: rgb(136, 132, 132);
+    padding-top: 2px;
+    padding-bottom: 2px;
+    margin-bottom: 3px;
+}
+
+a {
+    color: white;
+    padding-right: 2%;
+}
+
+section {
+    margin-left: 3%;
+    outline: 2px solid black;
+    background-color: white;
+    padding-top: 2px;
+    padding-bottom: 25px;
+    margin-right: 3%;
+}
+
+.TituloSecciones{
+    margin-left: 3%;
+    color: white;
+    background-color: rgb(59, 59, 59);
+}
+
+article {
+    margin-left: 6%;
+}
+
+.TitulosArticulos{
+    color: rgb(83, 83, 83);
+    margin-top: 40px;
+}
+
+#AltaEmpleadoH2{
+    margin-top: 30px;
+}
+
+label{
+    display: inline-block;
+    width: 100px;
+    margin-bottom: 7px;
+}
+
+input{
+    width: 200px;
+}
+
+input[type="button"]{
+    width: 170px;
+    height: 20px;
+}
+
+select{
+    width: 208px;
+}
+
+.labelRadioBtn{
+    display: inline;
+}
+
+#nombreDepartamentoCreciente{
+    margin-bottom: 30px;
+}
+
+.titleTableOfertasRubro{
+    display: inline;
+    margin-left: 70px;
+    font-weight: bold;
+    color: rgb(102, 101, 101);
+}
+
+table, tr, th{
+    border: 2px solid black;
+}
+
+#ListaRubrosMaxCantidadOfertas{
+    color: blue;
+}
+
+#ListaRubrosSinOfertas{
+    color: red;
+}
+
+.fotoIntegrantes{
+    width: 6%;
+    height: 6%;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.datosIntegrantes{
+    display: inline;
+    width: 600px;
+}
+
+.linkedin{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+img{
+    border: 1px solid rgb(160, 160, 160);
+}
+
+.divConozcaAlEquipo{
+    display: flex;
+    align-items: center;
+}
+
+.divConozcaAlEquipo > a{
+    width: 6%;
+    height: 6%;
+    padding: 0px;
+    margin-right: 50px;
+}
+
+footer{
+    background-color: rgb(136, 132, 132);
+    padding-top: 2px;
+    padding-bottom: 2px;
+    margin-bottom: 1%;
+    color: white;
+    text-align: center;
+    margin-top: 3px;
+    margin-bottom: 0px;
+}
+
+@media screen and (max-width: 500px) {
+    body{
+        background-color: blue;
+        font-size: 80%;
+    }
+}
